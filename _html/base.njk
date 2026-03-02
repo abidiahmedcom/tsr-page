@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "_components/head.njk" %}
+  <body>
+    {% include "_components/navbar.html" %}
+    {{ content | safe }}
+    {% include "_components/footer.html" %}
+  </body>
+
+  <script src="{{ site.baseurl }}/_scripts/_components/theme.js"></script>
+  <script src="{{ site.baseurl }}/_scripts/_components/scroll-top.js"></script>
+  <script src="{{ site.baseurl }}/_scripts/_components/hamburger.js"></script>
+  <script src="{{ site.baseurl }}/_scripts/global.js"></script>
+</html>
