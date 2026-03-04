@@ -1,0 +1,123 @@
+---
+permalink: /_style/_sub-pages/blog-post.css
+---
+
+@import url('../_components/global.css');
+@import url('../_components/palette.css');
+
+.title {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.blog-post-title {
+    font-size: var(--h2);
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Markdown content styles */
+.blog-post-content {
+    color: var(--text-primary);
+    line-height: 1.8;
+    font-size: var(--regular);
+}
+
+.blog-post-content h1,
+.blog-post-content h2,
+.blog-post-content h3,
+.blog-post-content h4,
+.blog-post-content h5,
+.blog-post-content h6 {
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.blog-post-content h2 { font-size: var(--h3); }
+.blog-post-content h3 { font-size: var(--h4); }
+
+.blog-post-content p {
+    margin: 1rem 0;
+    color: var(--text-primary);
+}
+
+.blog-post-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.blog-post-content a:hover {
+    text-decoration: underline;
+}
+
+.blog-post-content ul,
+.blog-post-content ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    color: var(--text-secondary);
+}
+
+.blog-post-content li {
+    margin: 0.4rem 0;
+}
+
+.blog-post-content code {
+    background-color: var(--bg-code);
+    color: var(--accent-color);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-family: 'Courier', monospace;
+    font-size: var(--very-small);
+}
+
+.blog-post-content pre {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.blog-post-content pre code {
+    background: none;
+    padding: 0;
+    font-size: var(--small);
+    color: var(--text-primary);
+}
+
+.blog-post-content blockquote {
+    border-left: 3px solid var(--accent-color);
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    border-radius: 0 4px 4px 0;
+}
+
+.blog-post-content img {
+    max-width: 100%;
+    margin: 1rem 0;
+}
+
+.blog-post-content hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+/* Tags section */
+.blog-post-tags {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.tags {
+    padding: 0.3rem 1rem;
+    color: var(--text-primary);
+}
