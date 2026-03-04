@@ -1,7 +1,7 @@
 {
-  "name": "personal-website",
-  "version": "0.2.1",
-  "description": "TSR personal website",
+  "name": "tsr-page",
+  "version": "0.1.0",
+  "description": "Academic profile template for scholars and designers. Powered by Eleventy & tsr-page theme.",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
@@ -12,6 +12,8 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "markdown-it": "^14.1.1"
+    "katex": "^0.16.33",
+    "markdown-it": "^14.1.1",
+    "markdown-it-texmath": "^1.0.0"
   }
 }

@@ -3,7 +3,10 @@ export default async function(eleventyConfig) {
   const yaml = await import('js-yaml');
   const path = await import('path');
   const markdownIt = await import('markdown-it');
+  const texmath = await import('markdown-it-texmath');
+  const katex = await import('katex');
   const md = markdownIt.default({ html: true });
+  md.use(texmath.default, { engine: katex.default, delimiters: 'dollars', katexOptions: { output: 'html' } });
 
   const siteContent = await fs.readFile('./site.yml', 'utf-8');
   const siteData = yaml.load(siteContent);
@@ -18,7 +21,26 @@ export default async function(eleventyConfig) {
       const content = await fs.readFile(filePath, 'utf-8');
       const data = yaml.load(content);
       const dataName = path.basename(file, path.extname(file));
-      
+
+      // Enrich blog posts with slug, url, external flag, and pre-rendered content
+      if (dataName === 'blog') {
+        const internalPosts = [];
+        for (const post of (data.posts || [])) {
+          if (post.path) {
+            const slug = path.basename(post.path, path.extname(post.path));
+            post.slug = slug;
+            post.url = `/blog/${slug}/`;
+            const mdContent = await fs.readFile('./' + post.path, 'utf-8');
+            const html = md.render(mdContent);
+            internalPosts.push({ ...post, content: html });
+          }
+          if (post.link) {
+            post.external = true;
+          }
+        }
+        eleventyConfig.addGlobalData('blogInternalPosts', () => internalPosts);
+      }
+
       eleventyConfig.addGlobalData(dataName, () => data);
     }
   }
