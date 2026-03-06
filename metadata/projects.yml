@@ -1,6 +1,6 @@
 adjustment:
   image:
-    height: "220px"
+    height: "220px" # Adjust the height of the project images as per your design needs.
 
 sections:
   - section-title: featured projects
@@ -26,7 +26,7 @@ sections:
           { url: /, icon: fa-brands fa-github },
           { url: /, icon: fa-solid fa-globe },
         ]
-        image: https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop
+        image: assets/projects/image.png # You can also use a local image by providing the path relative to the root of your project. Make sure to place the image in the correct folder.
         tags: [research, ml, data science, python]
 
   - section-title: other projects
@@ -37,7 +37,6 @@ sections:
           { url: /, icon: fa-brands fa-github },
           { url: /, icon: fa-solid fa-globe },
         ]
-        # image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q?auto=format&fit=crop
         tags: [writing]
       
       - title: My latest project
