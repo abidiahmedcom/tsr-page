@@ -8,7 +8,7 @@
 <div class="content">
     {% if about.profile.picture %}
     <div class="profile-picture">
-        <img src="{{ site.baseurl }}{{ about.profile.picture }}">
+        <img src="{{ site.baseurl }}{{ about.profile.picture }}" loading="lazy">
         <p class="profile-caption">{{ about.profile.caption }}</p>
     </div>
     {% endif %}
@@ -21,7 +21,7 @@
 <div class="features">
     <div class="news-feed">
         {% if about.news.feature-title %}
-        {% if about.news.items and about.news.items.size > 0 %}
+        {% if about.news.items and about.news.items.length > 0 %}
         <h3 class="feature-title">{{ about.news.feature-title }}</h3>
         {% for news in about.news.items %}
         <article class="news-card">
@@ -35,7 +35,7 @@
 
     <div class="publication-feed">
         {% if about.publications.feature-title %}
-        {% if about.publications.items and about.publications.items.size > 0 %}
+        {% if about.publications.items and about.publications.items.length > 0 %}
         <h3 class="feature-title">{{ about.publications.feature-title }}</h3>
         {% for publication in about.publications.items %}
         <article class="publication-card">
@@ -72,7 +72,7 @@
 
     <div class="blog-feed">
         {% if about.blog.feature-title %}
-        {% if about.blog.items and about.blog.items.size > 0 %}
+        {% if about.blog.items and about.blog.items.length > 0 %}
         <h3 class="feature-title">{{ about.blog.feature-title }}</h3>
         {% for blog in about.blog.items %}
         <article class="blog-card">
@@ -87,7 +87,11 @@
                 {% endif %}
             </div>
             <h4 class="blog-title">
+                {% if blog.external %}
                 <a href="{{ blog.link }}" target="_blank" rel="noopener noreferrer">{{ blog.title }}</a>
+                {% else %}
+                <a href="{{ site.baseurl }}{{ blog.url }}">{{ blog.title }}</a>
+                {% endif %}
             </h4>
             <p class="description">{{ blog.description }}</p>
         </article>
