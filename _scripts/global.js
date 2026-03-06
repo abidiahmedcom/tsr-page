@@ -23,3 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+// Hide loader when the entire page (including all images/fonts) is fully loaded
+window.addEventListener("load", function () {
+    const loaderWrapper = document.getElementById("loader-wrapper");
+    if (loaderWrapper) {
+        // Adding a slight delay ensures layout calculations (like masonry) are fully rendered before it's shown
+        setTimeout(() => {
+            loaderWrapper.classList.add("loaded");
+        }, 100);
+    }
+});
