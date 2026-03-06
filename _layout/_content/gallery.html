@@ -1,0 +1,15 @@
+<div class="gallery" id="gallery">
+    {% for image in gallery.galleries.images %}
+    <div class="gallery-item">
+        <img src="{{ image.src }}" alt="{{ image.alt }}">
+        <div class="gallery-overlay">
+            <!-- <span class="view-icon">&#x1F50D;</span> -->
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+</div>
