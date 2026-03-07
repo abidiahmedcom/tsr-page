@@ -1,6 +1,6 @@
 // Theme management
 function initTheme() {
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    const currentTheme = localStorage.getItem('theme') || DEFAULT_THEME || 'dark';
     updateThemeIcon(currentTheme);
 }
 

@@ -32,6 +32,7 @@ contacts:
 
 
 # Site configuration
+default_theme: dark # 'dark' or 'light'
 url: https://iam-tsr.github.io
 baseurl: /tsr-page # leave empty for github action deployment
 width: 900px
