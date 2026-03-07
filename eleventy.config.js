@@ -100,6 +100,9 @@ export default async function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./metadata/", {
 		resetConfig: true
 	});
+  eleventyConfig.addWatchTarget("./content/", {
+		resetConfig: true
+	});
 
   // Copy files to output
   eleventyConfig.addPassthroughCopy("_pages");

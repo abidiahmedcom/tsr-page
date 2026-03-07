@@ -13,11 +13,15 @@ Add your content here. You can use full **Markdown** syntax:
 - `inline code`
 - [Links](https://example.com)
 
+> This is a blockquote.
+> It can span multiple lines.
+
 ```python
 # Code blocks with syntax highlighting
 def hello():
     print("Hello, world!")
 ```
+---
 
 ## Conclusion
 

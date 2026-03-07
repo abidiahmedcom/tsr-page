@@ -1,3 +1,6 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate lobortis laoreet. Aliquam dictum dignissim dui, a vestibulum ante finibus sit amet. Nullam lobortis vestibulum purus, vel varius erat dapibus molestie. Phasellus eleifend consectetur tincidunt.
+Tell your story here, just like [Hello World](#). The directories without '_' in the beginning are user editable and can be customized as per your design requirement. For example, `content/`, `metadata/`, `assests/` and `site.yml`. Since the theme is built on Eleventy, which is designed for a Node.js engine. You can start using this template in a single command (follow setup instructions in [README.md](https://github.com/iam-tsr/tsr-page/blob/main/README.md)). I haven't created a YML facility for the color scheme, which I felt was not required since it will give you a better understanding for changing the color scheme through the liquid file - `_style/_components/palette.liquid`.
 
-Duis blandit, lectus id facilisis scelerisque, elit tortor varius risus, `in posuere` velit felis eu tellus. In maximus diam ut augue commodo vestibulum. Integer nec ullamcorper arcu. Fusce a mi eu augue placerat condimentum. Proin quam orci, pulvinar a tincidunt lobortis, dignissim in lacus. Mauris nibh purus, mattis non augue non, tincidunt malesuada enim. Nullam faucibus erat eu libero dapibus, id congue lorem lacinia. `In a felis` eget massa placerat [finibus](#) ultricies nec velit.
+Useful resources where can get icons and loader
+
+- Icons - [Font Awesome](https://fontawesome.com/)
+- Loader - [CSS Loader](https://css-loaders.com/)

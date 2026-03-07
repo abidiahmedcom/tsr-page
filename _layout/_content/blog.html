@@ -33,14 +33,9 @@
                         <div class="placeholder-image">No Image</div>
                         {% endif %}
                     </div>
-                    <div class="post-content">
-                        {% if post.color.text %}
-                        <h3 class="post-title" style="--post-text-color: {{ post.color.text }};">{{ post.title }}</h3>
-                        <p class="post-date" style="--post-text-color: {{ post.color.text }};">{{ post.date }}</p>
-                        {% else %}
+                    <div class="post-content"{% if post.color.text %} style="--post-text-color: {{ post.color.text }};"{% endif %}>
                         <h3 class="post-title">{{ post.title }}</h3>
                         <p class="post-date">{{ post.date }}</p>
-                        {% endif %}
                         {% if post.tags and post.tags.size > 0 %}
                         <div class="card-tags">
                             {% for tags in post.tags %}

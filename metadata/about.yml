@@ -11,9 +11,9 @@ news:
   feature-title: news
   items:
     - date: "[Aug 1948]"
-      description: "The first Chairman of the [Atomic Energy Commission](#) of India, serving from its establishment on August 10, 1948, until his death in 1966."
+      description: "The first Chairman of the [Atomic Energy Commission](#) of India, serving from its establishment on August 10, 1948."
     - date: "[Oct 1935]"
-      description: "Contributions to the understanding of [cosmic rays](#) and electron-positron scattering"
+      description: "Contributions to the understanding of cosmic rays and electron-positron scattering"
 
 
 publications:
